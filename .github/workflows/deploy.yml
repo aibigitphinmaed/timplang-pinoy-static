@@ -12,20 +12,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Reset and Stash changes
-        run: |
-          git reset --hard HEAD  # Fix unstaged changes error
-          git stash --include-untracked || echo "No changes to stash"
-
-      - name: Pull latest changes with rebase
-        run: git pull --rebase || (git stash pop && echo "Rebase failed, unstaged changes applied back")
-
-      - name: Apply stashed changes
-        run: git stash pop || echo "No stashed changes to apply"
-
       - name: Fix Image Paths
         run: |
-          BASE_URL="https://github.com/aibigitphinmaed/timplang-pinoy-static/blob/main"
+          BASE_URL="https://aibigitphinmaed.github.io/timplang-pinoy-static"
           find . -type f -name "*.html" -exec sed -i "s|src=\"\.\./Images/|src=\"$BASE_URL/Images/|g" {} +
           find . -type f -name "*.html" -exec sed -i "s|src=\"Images/|src=\"$BASE_URL/Images/|g" {} +
           find . -type f -name "index.html" -exec sed -i "s|src=\"../Images/|src=\"$BASE_URL/Images/|g" {} +
@@ -37,9 +26,9 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${GH_PAT}@github.com/aibigitphinmaed/timplang-pinoy-static.git
-          git stash push -m "Auto Stash Generated"
-          git pull --rebase origin main  # Fix: Pull changes before pushing
-          git stash pop
+          git add .
+          git commit -m "Automated update from GitHub Actions" || echo "No changes to commit"
+          git pull --rebase
           git add .
           git commit -m "Automated update from GitHub Actions" || echo "No changes to commit"
           git push origin gh-pages || echo "No changes to push"
