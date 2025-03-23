@@ -18,7 +18,7 @@ jobs:
           git stash --include-untracked || echo "No changes to stash"
 
       - name: Pull latest changes with rebase
-        run: git pull --rebase
+        run: git pull --rebase || (git stash pop && echo "Rebase failed, unstaged changes applied back")
 
       - name: Apply stashed changes
         run: git stash pop || echo "No stashed changes to apply"
@@ -28,7 +28,6 @@ jobs:
           BASE_URL="https://github.com/aibigitphinmaed/timplang-pinoy-static/blob/main"
           find . -type f -name "*.html" -exec sed -i "s|src=\"\.\./Images/|src=\"$BASE_URL/Images/|g" {} +
           find . -type f -name "*.html" -exec sed -i "s|src=\"Images/|src=\"$BASE_URL/Images/|g" {} +
-          
 
       - name: Commit and Push Changes
         env:
