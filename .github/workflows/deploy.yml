@@ -21,11 +21,13 @@ jobs:
         env:
           PAT: ${{ secrets.GH_PAT }}
         run: |
+          run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${PAT}@github.com/aibigitphinmaed/timplang-pinoy-static.git
           git add .
-          git commit -m "Fix image paths for GitHub Pages" || echo "No changes to commit"
-          git push
+          git commit -m "Automated update from GitHub Actions" || echo "No changes to commit"
+          git push origin main
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
