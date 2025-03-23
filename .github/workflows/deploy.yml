@@ -36,7 +36,9 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${GH_PAT}@github.com/aibigitphinmaed/timplang-pinoy-static.git
+          git stash push -m "Auto Stash Generated"
           git pull --rebase origin main  # Fix: Pull changes before pushing
+          git stash pop
           git add .
           git commit -m "Automated update from GitHub Actions" || echo "No changes to commit"
           git push origin gh-pages || echo "No changes to push"
