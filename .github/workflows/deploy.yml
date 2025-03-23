@@ -18,6 +18,8 @@ jobs:
           find . -type f -name "*.html" -exec sed -i "s|src=\"Images/|src=\"$BASE_URL/Images/|g" {} +
 
       - name: Commit and Push Changes
+        env:
+          PAT: ${{ secrets.GH_PAT }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
