@@ -1,0 +1,127 @@
+/* Ensure the body takes full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main container to push the footer to the bottom */
+.container {
+    flex: 1; /* Takes up remaining space */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #ff4500; /* Orangered background */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    opacity: 0;  /* Initially hidden */
+    transform: translateY(50px); /* Move footer down initially */
+    transition: opacity 0.6s ease-in, transform 0.6s ease-in, background-color 0.3s ease;
+}
+
+/* Hover effect on footer */
+footer:hover {
+    background-color: #e03c00; /* Darker shade of orangered */
+}
+
+/* Footer flexbox layout */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Footer columns */
+.footer-left, .footer-links, .footer-info {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px;
+}
+
+/* Footer headings and texts */
+footer h2, footer p {
+    margin-bottom: 10px;
+}
+
+footer h2.brand {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+footer .newsletter-text {
+    font-size: 1.2rem;
+    color: #f5f5f5;
+}
+
+/* Newsletter Form */
+.newsletter-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #e03c00; /* Darker shade of orangered */
+}
+
+/* Footer links */
+footer a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #f5f5f5;
+}
+
+/* Footer lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* Make footer responsive for small devices */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left {
+        padding: 15px 0;
+    }
+}
+
+/* Animation class that will be added via JavaScript */
+footer.show {
+    opacity: 1;
+    transform: translateY(0);
+}
