@@ -39,7 +39,7 @@ jobs:
           git pull --rebase origin main  # Fix: Pull changes before pushing
           git add .
           git commit -m "Automated update from GitHub Actions" || echo "No changes to commit"
-          git push origin main || echo "No changes to push"
+          git push origin gh-pages || echo "No changes to push"
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
