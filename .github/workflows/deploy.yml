@@ -14,7 +14,8 @@ jobs:
 
       - name: Fix Image Paths
         run: |
-          BASE_URL="https://github.com/aibigitphinmaed/timplang-pinoy-static"
+          BASE_URL="https://aibigitphinmaed.github.io/timplang-pinoy-static"
+          find . -type f -name "*.html" -exec sed -i "s|src=\"\.\./Images/|src=\"$BASE_URL/Images/|g" {} +
           find . -type f -name "*.html" -exec sed -i "s|src=\"Images/|src=\"$BASE_URL/Images/|g" {} +
 
       - name: Commit and Push Changes
