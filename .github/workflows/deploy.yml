@@ -12,6 +12,16 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Stash changes
+        run: git stash --include-untracked
+
+      - name: Pull latest changes with rebase
+        run: git pull --rebase
+
+      - name: Apply stashed changes
+        run: git stash pop || echo "No stashed changes to apply"
+
+
       - name: Fix Image Paths
         run: |
           BASE_URL="https://github.com/aibigitphinmaed/timplang-pinoy-static/blob/main"
