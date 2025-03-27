@@ -24,13 +24,12 @@
     <!-- END OF JS IMPORT-->
 
 
-<!--    &lt;!&ndash; packages/lib/cdn imports&ndash;&gt;-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 <body>
 <!--START OF NAVIGATION BAR-->
+
 <div class="top-bar-container">
     <div class="top-bar">
         <div class="logo">
@@ -86,38 +85,47 @@
 
 
 
-<footer id="footer">
-    <div class="footer-container">
-        <div class="footer-left">
-            <h2 class="brand">Timplang Pinoy</h2>
-            <p class="newsletter-text">Ready to Cook?</p>
-            <p>Sign up for our weekly newsletter</p>
-            <div class="newsletter-form">
-                <input type="email" placeholder="Enter your email">
-                <button>Sign Up</button>
-            </div>
-        </div>
 
-        <div class="footer-links">
-            <ul>
-                <li><a href="#">Recipes</a></li>
-                <li><a href="#">Culture</a></li>
-                <li><a href="#">CookBook</a></li>
-                <li><a href="#">Choosing Ingredients</a></li>
-                <li><a href="#">Buying Guides</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-info">
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contacts</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-            </ul>
+<footer class="footer-container">
+    <div class="grid-one">
+        <a href="#" class="footer-logo" data-aos="fade-down">Timplang Pinoy</a>
+        <div class="ready" data-aos="fade-down">Ready to Cook? </div>
+        <div class="signup-txt" data-aos="fade-down">Sign up for our weekly newsletter</div>
+        <input class="email" type="email" placeholder="Enter your email" data-aos="fade-down"><span><button class="signup-btn" data-aos="fade-down">SIGN UP</button></span><br>
+        <div class="social-txt" data-aos="fade-down">LET'S BE FRIENDS</div>
+        <div class="social-logo">
+            <a href="#"><img class="fb" src="https://aibigitphinmaed.github.io/timplang-pinoy-static/Images/FrontPageImg/fb.png" alt="" data-aos="fade-down"></a>
+            <a href="#"><img class="x" src="https://aibigitphinmaed.github.io/timplang-pinoy-static/Images/FrontPageImg/x.png" alt="" data-aos="fade-down"></a>
+            <a href="#"><img class="ig" src="https://aibigitphinmaed.github.io/timplang-pinoy-static/Images/FrontPageImg/ig.png" alt="" data-aos="fade-down"></a>
         </div>
     </div>
+
+    <div class="grid-two">
+        <a href="#" class="recipe-footer" data-aos="fade-down">Recipes</a>
+        <a href="#" class="culture-footer" data-aos="fade-down">Culture</a>
+        <a href="#" class="cookbook-footer" data-aos="fade-down">CookBook</a>
+        <a href="#" class="fresh-footer" data-aos="fade-down">Choosing Ingredients</a>
+        <a href="#" class="shop-footer" data-aos="fade-down">Buying Guides</a>
+    </div>
+
+    <div class="grid-three">
+        <a href="#" data-aos="fade-down">About Us</a>
+        <a href="#" data-aos="fade-down">Contacts</a>
+        <a href="#" data-aos="fade-down">Privacy Policy</a>
+        <a href="#" data-aos="fade-down">Terms of Service</a>
+    </div>
 </footer>
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        once: true,
+        duration: 1000,
+        easing: 'ease-in-out',
+    });
+
+</script>
 
 </body>
 </html>
