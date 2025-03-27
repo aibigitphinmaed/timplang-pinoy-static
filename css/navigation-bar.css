@@ -147,6 +147,8 @@
     border: 2px solid #FF5733;
     border-radius: 5px;
     padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
     justify-content: space-between;
 }
 
@@ -257,8 +259,8 @@
     }
 
     .search-bar-icon {
-        width: 30px;
-        height: 30px;
+        width: 28px;
+        height: 28px;
     }
 
     .menu {
@@ -293,6 +295,12 @@
         padding: 12px 15px;
     }
 }
+@media screen and (max-width: 382px){
+    .hamburger-container {
+        position: absolute; /* Allows it to adjust within the flow */
+        z-index: auto; /* Resets stacking order */
+    }
+}
 
 /* ✅ 260px - 319px (Extra Small Devices) */
 @media screen and (min-width: 260px) and (max-width: 319px) {
@@ -316,5 +324,10 @@
 
     .hamburger {
         font-size: 1.5rem;
+    }
+
+    .search-bar-icon {
+        width: 20px;
+        height: 20px;
     }
 }
