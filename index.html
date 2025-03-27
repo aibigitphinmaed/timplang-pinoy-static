@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/about-us.css">
     <link rel="stylesheet" href="css/popular-recipes.css">
+    <link rel="stylesheet" href="css/culture.css">
     <!-- END OF CSS IMPORT-->
 
     <!-- JS IMPORTS HERE-->
@@ -33,6 +34,15 @@
 
 <div class="top-bar-container">
     <div class="top-bar">
+        <div class="hamburger-container">
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class="mobile-menu" id="mobile-menu">
+                <li><a href="#" onclick="changeContent('html/home.html')">Home</a></li>
+                <li><a href="#" onclick="changeContent('html/recipe-list.html')">Recipes</a></li>
+                <li><a href="#" onclick="changeContent('html/culture.html')">Culture</a></li>
+                <li><a href="#" onclick="changeContent('html/about-us.html')">About Us</a></li>
+            </ul>
+        </div>
         <div class="logo">
             <a href="#" onclick="changeContent('html/home.html')">
                 Timplang Pinoy
@@ -63,15 +73,7 @@
         </ul>
 
 
-        <div class="hamburger-container">
-            <div class="hamburger" id="hamburger" onclick="toggleMenu()">☰</div>
-            <ul class="mobile-menu" id="mobile-menu">
-                <li><a href="#" onclick="changeContent('html/home.html')">Home</a></li>
-                <li><a href="#" onclick="changeContent('html/recipe-list.html')">Recipes</a></li>
-                <li><a href="#" onclick="changeContent('html/culture.html')">Culture</a></li>
-                <li><a href="#" onclick="changeContent('html/about-us.html')">About Us</a></li>
-            </ul>
-        </div>
+
     </div>
 </div>
 

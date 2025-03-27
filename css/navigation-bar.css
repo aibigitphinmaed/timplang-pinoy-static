@@ -64,8 +64,10 @@
 
 /* ✅ Ensure hamburger container is relative */
 .hamburger-container {
-    position: relative; /* ✅ Needed for absolute positioning of menu */
-    display: inline-block;
+    position: fixed; /* Keeps it in place */
+    top: 30px; /* Adjust based on spacing needs */
+    left: 30px; /* Adjust for left spacing */
+    z-index: 1100;
 }
 /* ✅ Hamburger Menu */
 .hamburger {
@@ -80,7 +82,7 @@
     display: none;
     position: absolute;
     top: 100%; /* ✅ Places it just below the hamburger */
-    right: 0;
+    left: 0;
     background: white;
     width: 150px;
     border-radius: 5px;
@@ -200,6 +202,7 @@
         width: 32px;
         height: 32px;
     }
+
 }
 
 /* ✅ 768px - 1023px (Tablets & Large Phones) */
