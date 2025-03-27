@@ -1,127 +1,215 @@
-/* Ensure the body takes full height */
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Main container to push the footer to the bottom */
-.container {
-    flex: 1; /* Takes up remaining space */
-}
-
-/* Footer Styling */
-footer {
-    background-color: #ff4500; /* Orangered background */
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    opacity: 0;  /* Initially hidden */
-    transform: translateY(50px); /* Move footer down initially */
-    transition: opacity 0.6s ease-in, transform 0.6s ease-in, background-color 0.3s ease;
-}
-
-/* Hover effect on footer */
-footer:hover {
-    background-color: #e03c00; /* Darker shade of orangered */
-}
-
-/* Footer flexbox layout */
+/* Footer Styles */
 .footer-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     flex-wrap: wrap;
-    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center; /* Center content vertically */
+    text-align: center;
+    width: 100%;
+    max-width: 1366px;
     margin: 0 auto;
     padding: 20px;
+    background-color: white;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer columns */
-.footer-left, .footer-links, .footer-info {
-    flex: 1;
-    min-width: 250px;
-    padding: 10px;
+/* Footer Logo */
+.footer-logo {
+    font-family: Verdana, sans-serif;
+    color: #FF5733;
+    font-size: 3rem;
+    font-weight: bold;
 }
 
-/* Footer headings and texts */
-footer h2, footer p {
-    margin-bottom: 10px;
-}
-
-footer h2.brand {
-    color: #fff;
-    font-size: 1.8rem;
-}
-
-footer .newsletter-text {
-    font-size: 1.2rem;
-    color: #f5f5f5;
-}
-
-/* Newsletter Form */
-.newsletter-form input {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    font-size: 1rem;
-}
-
-.newsletter-form button {
-    background-color: #ff4500;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.newsletter-form button:hover {
-    background-color: #e03c00; /* Darker shade of orangered */
-}
-
-/* Footer links */
-footer a {
+/* Fix link colors */
+.footer-container a {
     text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 
-footer a:hover {
-    color: #f5f5f5;
+.footer-container a:hover {
+    color: orangered;
 }
 
-/* Footer lists */
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Grid One: Branding & Subscription */
+.grid-one {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+    padding: 10px;
 }
 
-ul li {
-    margin-bottom: 8px;
+.ready {
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
-/* Make footer responsive for small devices */
-@media screen and (max-width: 768px) {
+.signup-txt {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.email {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: white;
+    color: black;
+}
+
+.signup-btn {
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #ff5722;
+}
+
+/* Social Icons */
+.social-txt {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.social-logo {
+    margin-top: 10px;
+}
+
+.social-logo img {
+    width: 30px;
+    margin: 0 5px;
+    transition: transform 0.3s ease;
+}
+
+.social-logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Grid Two: Navigation Links */
+.grid-two {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    color: orangered;
+}
+
+.grid-two a {
+    color: orangered;
+}
+
+/* Grid Three: Legal Links */
+.grid-three {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.grid-three a {
+    color: grey;
+}
+
+/* Responsive Design */
+
+/* Large Screens (1024px - 1366px) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+    .footer-container {
+        max-width: 1366px;
+    }
+}
+
+/* Tablets & Medium Devices (767px - 1023px) */
+@media (min-width: 767px) and (max-width: 1023px) {
+    .footer-container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .grid-one, .grid-two, .grid-three {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .email {
+        width: 90%;
+    }
+}
+
+/* Small Phones (320px - 767px) */
+@media (min-width: 320px) and (max-width: 767px) {
     .footer-container {
         flex-direction: column;
         text-align: center;
+        padding: 15px;
     }
 
-    .footer-left {
-        padding: 15px 0;
+    .grid-one, .grid-two, .grid-three {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .email {
+        width: 100%;
+    }
+
+    .signup-btn {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .social-logo img {
+        width: 25px;
+    }
+
+    .grid-three {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px; /* Add some spacing */
+    }
+
+    .grid-three a {
+        font-size: 16px; /* Increase font size for readability */
     }
 }
 
-/* Animation class that will be added via JavaScript */
-footer.show {
-    opacity: 1;
-    transform: translateY(0);
+/* Extra Small Phones (260px - 319px) */
+@media (min-width: 260px) and (max-width: 319px) {
+    .footer-container {
+        padding: 10px;
+    }
+
+    .footer-logo {
+        font-size: 2rem;
+    }
+
+    .email {
+        width: 100%;
+    }
+
+    .signup-btn {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .social-logo img {
+        width: 20px;
+    }
+
 }
