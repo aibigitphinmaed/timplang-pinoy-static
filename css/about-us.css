@@ -35,17 +35,10 @@ html {
 
 /* General styling for all sections */
 .about-container section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     margin-bottom: 50px;
 }
 
-/* Add animation for the sections when they come into view */
-.about-container section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+
 
 /* Section Heading */
 .about-container section h2 {
@@ -93,21 +86,12 @@ html {
     color: orangered;
     font-weight: bold;
     font-size: 1.1rem;
-    transition: color 0.3s ease;
 }
 
 .about-container .ul1 li a:hover,
 .about-container .ul2 li a:hover {
     color: darkorange;
 }
-
-/* Optional: Add a delay for each section for a staggered effect */
-.about-container #section2 { transition-delay: 0.3s; }
-.about-container #section3 { transition-delay: 0.6s; }
-.about-container #section4 { transition-delay: 0.9s; }
-.about-container #section5 { transition-delay: 1.2s; }
-.about-container #section6 { transition-delay: 1.5s; }
-.about-container #section7 { transition-delay: 1.8s; }
 
 /* Footer Styling */
 footer {
