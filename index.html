@@ -52,7 +52,7 @@
             </datalist>
         </div>
 
-        <ul class="menu" id="menu">
+        <ul class="menu">
             <li><a href="#" onclick="changeContent('html/home.html')" class="italic">Home</a></li>
             <li class="divider"></li>
             <li><a href="#" onclick="changeContent('html/recipe-list.html')" class="italic">Recipe's</a></li>
@@ -62,9 +62,19 @@
             <li><a href="#" onclick="changeContent('html/about-us.html')" class="italic">About Us</a></li>
         </ul>
 
-        <div class="hamburger" id="hamburger" onclick="toggleMenu()">☰</div>
+
+        <div class="hamburger-container">
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class="mobile-menu" id="mobile-menu">
+                <li><a href="#" onclick="changeContent('html/home.html')">Home</a></li>
+                <li><a href="#" onclick="changeContent('html/recipe-list.html')">Recipes</a></li>
+                <li><a href="#" onclick="changeContent('html/culture.html')">Culture</a></li>
+                <li><a href="#" onclick="changeContent('html/about-us.html')">About Us</a></li>
+            </ul>
+        </div>
     </div>
 </div>
+
 <!--END OF NAVIGATION BAR -->
 
 <div class="container" id="container">

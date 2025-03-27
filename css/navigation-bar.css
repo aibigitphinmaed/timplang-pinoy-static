@@ -62,12 +62,78 @@
     height: 30px;
 }
 
+/* ✅ Ensure hamburger container is relative */
+.hamburger-container {
+    position: relative; /* ✅ Needed for absolute positioning of menu */
+    display: inline-block;
+}
 /* ✅ Hamburger Menu */
 .hamburger {
     display: none;
     font-size: 24px;
     cursor: pointer;
 }
+
+
+/* ✅ Mobile Menu (Compact Dropdown) */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* ✅ Places it just below the hamburger */
+    right: 0;
+    background: white;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex-direction: column;
+    padding: 5px 0;
+    list-style: none;
+    font-size: 0.9rem;
+    z-index: 2000;
+}
+
+/* ✅ Show dropdown */
+.mobile-menu.active {
+    display: block;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+/* ✅ Mobile Menu Items */
+.mobile-menu li {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu li:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+/* ✅ Hover Effect */
+.mobile-menu a:hover {
+    background: rgba(255, 87, 51, 0.1);
+}
+
+/* ✅ Dropdown Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* ✅ Search Bar */
 .search-container {
@@ -137,7 +203,7 @@
 }
 
 /* ✅ 768px - 1023px (Tablets & Large Phones) */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 767px) and (max-width: 1023px) {
     .top-bar {
         display: flex;
         align-items: center;
@@ -152,6 +218,7 @@
     .search-container {
         flex: 2;
         max-width: 600px;
+        margin-right: 20px;
     }
 
     .menu {
@@ -232,6 +299,7 @@
 
     .search-container {
         max-width: 220px;
+        margin-right: 0;
     }
 
     .search-bar {
