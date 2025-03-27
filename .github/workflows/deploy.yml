@@ -18,6 +18,7 @@ jobs:
           find . -type f -name "*.html" -exec sed -i "s|src=\"\.\./Images/|src=\"$BASE_URL/Images/|g" {} +
           find . -type f -name "*.html" -exec sed -i "s|src=\"Images/|src=\"$BASE_URL/Images/|g" {} +
           find . -type f -name "index.html" -exec sed -i "s|src=\"../Images/|src=\"$BASE_URL/Images/|g" {} +
+          find . -type f -name "index.html" -exec sed -i "s|src=\"Images/|src=\"$BASE_URL/Images/|g" {} +
 
       - name: Commit and Push Changes
         env:
