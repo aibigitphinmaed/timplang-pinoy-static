@@ -1,10 +1,12 @@
+/* ✅ Top Bar */
 .top-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Ensures even spacing */
     flex-wrap: wrap;
 }
 
+/* ✅ Top Bar Container */
 .top-bar-container {
     width: 100%;
     max-width: 1366px;
@@ -12,15 +14,14 @@
     padding: 10px 20px;
     background-color: white;
     box-shadow: 0 2px 10px -2px rgba(128, 128, 128, 0.5);
-
-    /* Sticky to top */
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Ensures it stays above other elements */
+    z-index: 1000;
 }
 
+/* ✅ Logo */
 .logo {
     font-family: Verdana, sans-serif;
     font-size: 3rem;
@@ -30,7 +31,7 @@
 
 .logo a {
     text-decoration: none;
-    color: orange; /* Keeps the text orange */
+    color: orange;
     font-weight: bold;
 }
 
@@ -38,10 +39,11 @@
     color: orangered;
 }
 
-/* Navigation Menu */
+/* ✅ Navigation Menu */
 .menu {
     display: flex;
     list-style: none;
+    justify-content: flex-end;
 }
 
 .menu li {
@@ -54,89 +56,134 @@
     cursor: pointer;
 }
 
+/* ✅ Divider */
 .divider {
     border-left: 1px solid black;
     height: 30px;
 }
 
-/* Hamburger Menu */
+/* ✅ Hamburger Menu */
 .hamburger {
     display: none;
     font-size: 24px;
     cursor: pointer;
 }
 
-/* Search Bar */
+/* ✅ Search Bar */
 .search-container {
     display: flex;
     align-items: center;
     position: relative;
     width: 100%;
-    max-width: 300px; /* Adjust as needed */
+    max-width: 400px;
+    border: 2px solid #FF5733;
+    border-radius: 5px;
+    padding: 5px;
+    justify-content: space-between;
 }
 
 .search-bar {
     flex: 1;
-    max-width: 300px;
     padding: 8px;
-    margin: 0 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
 }
 
 .search-bar-icon {
-    color: white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #FF5733;
-    position: relative;
-    border-radius: 5px;
-    width: 40px;
-    height: 40px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
+/* ✅ 1024px - 1366px (Medium Screens) */
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
     .top-bar {
-        flex-direction: row;
+        display: flex;
         align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+        flex: 1;
     }
 
     .search-container {
-        width: 85%;
-        max-width: 350px;
+        flex: 2;
+        max-width: 600px;
     }
 
     .menu {
-        display: none; /* Hidden by default on smaller screens */
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
     }
 
-    .hamburger {
-        display: block;
-        font-size: 2rem;
-        cursor: pointer;
+    .search-bar {
+        font-size: 0.95rem;
+    }
+
+    .search-bar-icon {
+        width: 32px;
+        height: 32px;
     }
 }
 
-/* Adjustments for 300px Width Screens */
-@media screen and (max-width: 400px) {
+/* ✅ 768px - 1023px (Tablets & Large Phones) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .top-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+        flex: 1;
+    }
+
+    .search-container {
+        flex: 2;
+        max-width: 600px;
+    }
+
+    .menu {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+/* ✅ 320px - 767px (Small Phones & Compact Tablets) */
+@media screen and (min-width: 320px) and (max-width: 767px) {
     .top-bar {
         flex-direction: column;
         align-items: center;
     }
 
     .logo {
-        font-size: 1.5rem; /* Reduce font size to fit */
+        font-size: 1.8rem;
         text-align: center;
     }
 
     .search-container {
-        width: 90%; /* Fit the screen better */
+        width: 90%;
         max-width: 250px;
-        justify-content: center;
     }
 
     .search-bar {
-        width: 100%;
-        font-size: 0.9rem; /* Smaller text */
+        font-size: 0.9rem;
     }
 
     .search-bar-icon {
@@ -146,16 +193,57 @@
 
     .menu {
         width: 90%;
-        right: 5%;
-        left: 5%;
-    }
-
-    .menu li {
-        font-size: 0.9rem;
-        padding: 10px;
+        text-align: center;
     }
 
     .hamburger {
-        font-size: 1.8rem; /* Slightly smaller for better fit */
+        display: block;
+        font-size: 1.8rem;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: white;
+        width: 200px;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        padding: 0;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    .menu li {
+        padding: 12px 15px;
+    }
+}
+
+/* ✅ 260px - 319px (Extra Small Devices) */
+@media screen and (min-width: 260px) and (max-width: 319px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .search-container {
+        max-width: 220px;
+    }
+
+    .search-bar {
+        font-size: 0.8rem;
+    }
+
+    .menu {
+        width: 95%;
+        text-align: center;
+    }
+
+    .hamburger {
+        font-size: 1.5rem;
     }
 }
