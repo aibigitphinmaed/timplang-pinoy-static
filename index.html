@@ -25,33 +25,46 @@
 
 
 <!--    &lt;!&ndash; packages/lib/cdn imports&ndash;&gt;-->
-<!--    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">-->
-<!--    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>-->
-<!--    <script src="https://unpkg.com/scrollreveal"></script>-->
-<!--    &lt;!&ndash; &ndash;&gt;-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 <body>
 <!--START OF NAVIGATION BAR-->
-<div class="top-bar">
-    <div class="logo">
-        <a href="#" onclick="changeContent('html/home.html')">
-            Timplang Pinoy
-        </a>
+<div class="top-bar-container">
+    <div class="top-bar">
+        <div class="logo">
+            <a href="#" onclick="changeContent('html/home.html')">
+                Timplang Pinoy
+            </a>
+        </div>
+
+        <div class="search-container">
+            <input list="recipe-search-data" type="text" class="search-bar" placeholder="Find a recipe">
+            <img class="search-bar-icon" src="Images/FrontPageImg/search.png"/>
+
+            <datalist id="recipe-search-data">
+                <option value="Adobong Manok"></option>
+                <option value="Dinakdakan"></option>
+                <option value="Kaldereta"></option>
+                <option value="Nilagang Baboy"></option>
+                <option value="Pakbet"></option>
+            </datalist>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li><a href="#" onclick="changeContent('html/home.html')" class="italic">Home</a></li>
+            <li class="divider"></li>
+            <li><a href="#" onclick="changeContent('html/recipe-list.html')" class="italic">Recipe's</a></li>
+            <li class="divider"></li>
+            <li><a href="#" onclick="changeContent('html/culture.html')" class="italic">Culture</a></li>
+            <li class="divider"></li>
+            <li><a href="#" onclick="changeContent('html/about-us.html')" class="italic">About Us</a></li>
+
+        </ul>
+
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">☰</div>
     </div>
-
-    <input type="text" class="search-bar" placeholder="Search...">
-    <ul class="menu" id="menu">
-        <li><a href="#" onclick="changeContent('html/home.html')" class="italic">Home</a></li>
-        <li class="divider"></li>
-        <li><a href="#" onclick="changeContent('html/recipe-list.html')" class="italic">Recipe's</a></li>
-        <li class="divider"></li>
-        <li><a href="#" onclick="changeContent('html/culture.html')" class="italic">Culture</a></li>
-        <li class="divider"></li>
-        <li><a href="#" onclick="changeContent('html/about-us.html')" class="italic">About Us</a></li>
-
-    </ul>
-    <div class="hamburger" id="hamburger" onclick="toggleMenu()">☰</div>
 </div>
 <!--END OF NAVIGATION BAR -->
 
