@@ -1,7 +1,7 @@
 /* General Styles */
 .intro {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     max-width: 1000px;
@@ -26,12 +26,19 @@
 }
 
 /* Intro Text */
+.intro-txt-mobile,
 .intro-txt {
+    display: flex;
     font-size: 1rem;
     max-width: 600px;
     margin-bottom: 20px;
     line-height: 1.5;
 }
+
+.intro-txt-mobile {
+    display: none;
+}
+
 
 /* Image */
 .intro-img {
@@ -203,24 +210,20 @@
     }
 }
 
-/* Responsive Fixes */
-@media (min-width: 768px) {
+@media (max-device-width: 920px) {
+    .intro-img {
+        width: auto;
+    }
+
+    .intro-txt-mobile {
+        display: flex;
+        justify-self: auto;
+    }
+
+    .intro-txt {
+        display: none;
+    }
     .intro {
-        flex-direction: row;
-        text-align: left;
-    }
-
-    .head-intro, .intro-txt {
-        margin: 0 20px;
-    }
-
-    .intro-img {
-        width: 350px;
-    }
-}
-
-@media (max-width: 767px) {
-    .intro-img {
-        width: 250px;
+        flex-direction: column;
     }
 }
