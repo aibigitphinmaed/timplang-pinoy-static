@@ -175,7 +175,6 @@
     background-color: #FF5733;
     color: white;
     border-radius: 5px 5px 5px 5px;
-    cursor: pointer;
 }
 
 @media (max-device-width: 920px){
@@ -193,8 +192,12 @@
     }
 }
 
-@media(max-device-width: 520px){
+
+@media(max-device-width: 560px){
     .mobile-logo {
+        display: none;
+    }
+    .search-bar-icon {
         display: none;
     }
 }
@@ -207,3 +210,4 @@
         width: auto;
     }
 }
+
