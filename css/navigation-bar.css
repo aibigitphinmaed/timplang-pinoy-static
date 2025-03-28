@@ -152,6 +152,8 @@
     margin-left: 10px;
     margin-right: 10px;
     justify-content: space-between;
+    min-height: 10px;
+    min-width: 50px;
 }
 
 .search-bar {
@@ -163,8 +165,10 @@
 }
 
 .search-bar-icon {
-    width: 35px;
-    height: 35px;
+    max-width: 35px;
+    max-height: 35px;
+    min-width: 5px;
+    min-height: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
