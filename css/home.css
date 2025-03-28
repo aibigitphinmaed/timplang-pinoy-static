@@ -26,17 +26,12 @@
 }
 
 /* Intro Text */
-.intro-txt-mobile,
 .intro-txt {
     display: flex;
     font-size: 1rem;
     max-width: 600px;
     margin-bottom: 20px;
     line-height: 1.5;
-}
-
-.intro-txt-mobile {
-    display: none;
 }
 
 
@@ -130,8 +125,8 @@
 }
 
 .why-item img {
-    width: 30px;
-    height: 30px;
+    max-width: 30px;
+    max-height: 30px;
     background-color: orangered;
     border-radius: 5px 5px 5px 5px;
 }
@@ -214,16 +209,18 @@
     .intro-img {
         width: auto;
     }
-
-    .intro-txt-mobile {
-        display: flex;
-        justify-self: auto;
-    }
-
-    .intro-txt {
-        display: none;
-    }
     .intro {
         flex-direction: column;
     }
+
+    .why-left, .why-right {
+        flex: 1;
+        min-width: 10px;
+    }
+
+    .why-content {
+        justify-content: space-between;
+        flex-direction: column;
+    }
 }
+
