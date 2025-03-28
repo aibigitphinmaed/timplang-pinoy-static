@@ -11,6 +11,7 @@
     padding: 20px;
     background-color: white;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+
 }
 
 /* Footer Logo */
@@ -121,95 +122,4 @@
 
 .grid-three a {
     color: grey;
-}
-
-/* Responsive Design */
-
-/* Large Screens (1024px - 1366px) */
-@media (min-width: 1024px) and (max-width: 1366px) {
-    .footer-container {
-        max-width: 1366px;
-    }
-}
-
-/* Tablets & Medium Devices (767px - 1023px) */
-@media (min-width: 767px) and (max-width: 1023px) {
-    .footer-container {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    .grid-one, .grid-two, .grid-three {
-        text-align: center;
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    .email {
-        width: 90%;
-    }
-}
-
-/* Small Phones (320px - 767px) */
-@media (min-width: 320px) and (max-width: 767px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px;
-    }
-
-    .grid-one, .grid-two, .grid-three {
-        text-align: center;
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .email {
-        width: 100%;
-    }
-
-    .signup-btn {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .social-logo img {
-        width: 25px;
-    }
-
-    .grid-three {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 15px; /* Add some spacing */
-    }
-
-    .grid-three a {
-        font-size: 16px; /* Increase font size for readability */
-    }
-}
-
-/* Extra Small Phones (260px - 319px) */
-@media (min-width: 260px) and (max-width: 319px) {
-    .footer-container {
-        padding: 10px;
-    }
-
-    .footer-logo {
-        font-size: 2rem;
-    }
-
-    .email {
-        width: 100%;
-    }
-
-    .signup-btn {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .social-logo img {
-        width: 20px;
-    }
-
 }
