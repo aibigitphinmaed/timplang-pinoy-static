@@ -10,13 +10,16 @@ body {
     padding-top: 60px;
 }
 
-.container {
-    width: 90%;
+.main-container {
+    width: 100%;
     max-width: 1200px;
+    min-width: auto;
     background: white;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    margin: 10px auto auto;
+    margin: auto 10px auto 10px;
+    flex: fit-content;
+    flex-direction: column;
 }
 

@@ -169,8 +169,6 @@
 .search-bar-icon {
     max-width: 35px;
     max-height: 35px;
-    min-width: 5px;
-    min-height: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,5 +196,14 @@
 @media(max-device-width: 520px){
     .mobile-logo {
         display: none;
+    }
+}
+
+@media (max-device-width: 300px){
+    .search-bar-icon {
+        display: none;
+    }
+    .search-bar {
+        width: auto;
     }
 }
