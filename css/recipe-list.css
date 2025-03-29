@@ -106,6 +106,32 @@
     color: #444;
 }
 
+.recipe-header{
+    text-align: center;
+    font-size:2rem;
+    color:#FF5733;
+}
+
+.ingredients-list, .procedure-list{
+    font-size:1.5rem;
+}
+
+.ingredients-header{
+    font-size:1.8rem;
+}
+
+.popover-procedure {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Additional styling as needed */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 2000;
+}
+
 /* Star Rating */
 .star-rating {
     color: gold;
@@ -116,5 +142,11 @@
 @media (max-device-width: 920px) {
     .recipe-menu {
         display: none;
+    }
+
+    .popover-procedure {
+        width: 90%;     /* Use 90% of viewport width */
+        padding: 15px;  /* Slightly reduce padding if needed */
+        height: 50%;
     }
 }

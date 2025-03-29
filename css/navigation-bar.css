@@ -7,10 +7,8 @@
 
 /* ✅ Top Bar Container */
 .top-bar-container {
-    width: 100%;
-    max-width: 1366px;
+    width: min(100vw, 1366px);
     margin: 0 auto; /* Centers the container */
-    padding: 10px 20px;
     background-color: white;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2); /* More pronounced elevation */
     position: fixed;
@@ -73,6 +71,7 @@
 .hamburger-container {
     position: relative; /* Keeps it in place */
     display: none;
+    margin: auto 10px;
 }
 /* ✅ Hamburger Menu */
 .hamburger {
@@ -147,15 +146,15 @@
     display: flex;
     align-items: center;
     position: relative;
-    width: 80%;
+    width: min(80vw, 100%);
     border: 2px solid #FF5733;
     border-radius: 5px;
     padding: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 5px auto 5px auto;
     justify-content: space-between;
     min-height: 10px;
     min-width: 10px;
+
 }
 
 .search-bar {
@@ -177,7 +176,7 @@
     border-radius: 5px 5px 5px 5px;
 }
 
-@media (max-device-width: 920px){
+@media (max-width: 920px){
     .hamburger-container{
         display: flex;
     }
@@ -193,7 +192,7 @@
 }
 
 
-@media(max-device-width: 560px){
+@media (max-device-width: 560px){
     .mobile-logo {
         display: none;
     }
