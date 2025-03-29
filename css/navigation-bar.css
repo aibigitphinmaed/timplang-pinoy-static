@@ -192,7 +192,7 @@
 }
 
 
-@media (max-device-width: 560px){
+@media (max-width: 560px){
     .mobile-logo {
         display: none;
     }
@@ -201,7 +201,7 @@
     }
 }
 
-@media (max-device-width: 300px){
+@media (max-width: 300px){
     .search-bar-icon {
         display: none;
     }
