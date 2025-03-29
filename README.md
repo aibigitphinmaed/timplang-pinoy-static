@@ -6,3 +6,6 @@ PHP Built In Server
 2. Click `Install Additonal Debuggers`
 3. Search Built In Server and look for the `PHP Built In Server`
 4. Click Install
+
+website will run on: http://localhost:64432/
+so better make sure that port is open
