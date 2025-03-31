@@ -7,7 +7,7 @@
 
 /* ✅ Top Bar Container */
 .top-bar-container {
-    width: min(100vw, 1366px);
+    width: min(100vw, 100%);
     margin: 0 auto; /* Centers the container */
     background-color: white;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2); /* More pronounced elevation */
