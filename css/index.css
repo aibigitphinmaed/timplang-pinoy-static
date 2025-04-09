@@ -13,8 +13,25 @@ body {
     justify-content: center;
 }
 
+.italic {
+    font-style: italic;
+    top: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.menu ul li {
+    margin-top: 1rem;
+    height: min(100vh, 100%);
+}
+
+
 .website-wrapper {
-   flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .main-container {
@@ -32,10 +49,10 @@ body {
 }
 
 .content-divider-section {
-    width: min(80vw,100%);             
-    height: 0.1vh;            
-    background-color: #726c6c;   
-    margin: 2rem 0;           
+    width: min(80vw, 100%);
+    height: 0.1vh;
+    background-color: #726c6c;
+    margin: 2rem 0;
 }
 
 html {
