@@ -190,6 +190,13 @@
     .mobile-logo {
         display: flex;
     }
+    .menu-dots {
+        display: flex;
+        width: min(25vw,256px);
+        height: min(25vh,256px);
+        background-color: black;
+    }
+    
 }
 
 
@@ -211,3 +218,8 @@
     }
 }
 
+
+.menu-dots {
+    display: none;
+   
+}
