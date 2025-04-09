@@ -178,6 +178,33 @@
     padding: 1rem;
 }
 .card h3 {
-    word-break: break-all;
+    font-size: 2rem;
 }
+.card img {
+    width: 100%;
+    height: clamp(180px, 25vh, 240px);
+    object-fit: cover;
+}
+
+.card button {
+    display: flex;
+    flex-direction: row;
+    background-color: orange;
+    color: white;
+    border-radius: 0.6rem;
+    border: none;
+    justify-content: center;
+    width: min(20vw, 40%);
+}
+.card button svg {
+    width: 2rem;   
+    height: 2rem;  
+    margin-left: 0.5rem;  
+    color: white; 
+}
+
+.card button:hover, .card button:active {
+    background-color: #cc3700;
+}
+
 /*END OF THIRD SECTION*/
