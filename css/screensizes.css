@@ -8,12 +8,12 @@
 * HOME PAGE SCREEN SIZES
 */
 
-@media (max-width:920px) {
+@media (max-width:1080px) {
     /*
     * Since column na yun direction dito ng flex dapat 100 na yun width ng each element
     * ng first section natin sa home page
     */
-    .first-section {
+    .first-section-home{
         flex-direction: column;
     }
     .tagline {
@@ -26,6 +26,24 @@
     .spinning-image-container {
         width: min(100vw,100%);
     }
+
+
+    .second-section-home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .second-section-home-left-side, .second-section-home-right-side, .second-section-home-center-image  {
+        width: min(100vw, 100%);
+    }
+
+    .second-section-home-left-side div img, .second-section-home-right-side div img {
+        width: min(5vw,50%);
+        height: min(5vw,50%);
+    }
+   
+
 
 }
 

@@ -7,7 +7,7 @@
 
 /* ✅ Top Bar Container */
 .top-bar-container {
-    width: min(100vw, 100%);
+    width: min(100vw, 1920px);
     margin: 0 auto; /* Centers the container */
     background-color: white;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2); /* More pronounced elevation */
@@ -17,7 +17,7 @@
     right: 0;
     left: 0;
     z-index: 1000;
-    height: 15vh;
+    height: min(15vh, 360px);
 }
 
 /* ✅ Logo */
