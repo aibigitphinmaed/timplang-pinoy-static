@@ -1,19 +1,28 @@
 .home-container {
     width: min(80vw, 1920px);
-    height: min(100vh, 100%);
     margin: 0 auto;
-    padding-top: 15vh;
-    overflow-y: auto;
-    overflow-x: hidden;
+    padding-top: 15vh; /* Space at the top */
+    overflow-y: auto; /* Make content scrollable if it exceeds the height */
     display: flex;
     flex-direction: column;
-    scrollbar-width: none;  /* For Firefox */
-    -ms-overflow-style: none;  /* For IE and Edge */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For IE and Edge */
 }
+
+.home-container::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar in Webkit browsers (e.g., Chrome, Safari) */
+}
+
+/* Ensure content doesn't get hidden at the bottom */
+.home-container > * {
+    flex-shrink: 0; /* Prevent elements from shrinking if the container height is constrained */
+}
+
 
 .home-container h1 {
     align-self: center;
     margin: 0 auto;
+    font-size: 5rem;
 }
 
 
@@ -115,32 +124,39 @@
     align-items: center;
 }
 
-.second-section-home-left-side, .second-section-home-right-side {
+.second-section-home-left-side,
+.second-section-home-right-side {
     width: min(25vw, 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.second-section-home-left-side div, .second-section-home-right-side div {
+
+.second-section-home-left-side div,
+.second-section-home-right-side div {
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center;     
+    justify-content: center;
+    align-items: center;
 }
 
-.second-section-home-left-side div img, .second-section-home-right-side div img {
-    width: min(5vw,10%);
-    height: min(5vw,10%);
+.second-section-home-left-side div img,
+.second-section-home-right-side div img {
+    width: min(5vw, 10%);
+    height: min(5vw, 10%);
     background-color: orangered;
     border-radius: 10%;
     margin: 1rem;
 }
 
-.second-section-home-left-side div h3, .second-section-home-right-side div h3 {
+.second-section-home-left-side div h3,
+.second-section-home-right-side div h3 {
     margin: 1rem;
 }
-.second-section-home-left-side div p, .second-section-home-right-side div p {
+
+.second-section-home-left-side div p,
+.second-section-home-right-side div p {
     margin: 1rem;
 }
 
@@ -152,6 +168,7 @@
     height: auto;
     margin: 1rem;
 }
+
 .second-section-home-center-image img {
     width: min(50vw, 100%);
 }
@@ -160,26 +177,28 @@
 
 /*THIRD SECTION*/
 .third-section-home {
-    display: grid;                    
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    gap: 2rem;                          
-    width: 100%;                         
-    padding: 2rem;                    
-    box-sizing: border-box;             
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
 .card {
-    background-color: #fff;             
-    border-radius: 1rem;                               
+    background-color: #fff;
+    border-radius: 1rem;
     box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1);
-    display: flex;                      
-    flex-direction: column;            
-    transition: transform 0.3s ease;     
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
     padding: 1rem;
 }
+
 .card h3 {
     font-size: 2rem;
 }
+
 .card img {
     width: 100%;
     height: clamp(180px, 25vh, 240px);
@@ -196,16 +215,27 @@
     justify-content: center;
     width: min(20vw, 40%);
 }
+
 .card button svg {
-    width: 2rem;   
-    height: 2rem;  
-    margin-left: 0.5rem;  
-    color: white; 
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.5rem;
+    color: white;
 }
 
-.card button:hover, .card button:active {
+.card button:hover,
+.card button:active {
     background-color: #cc3700;
 }
 
 /*END OF THIRD SECTION*/
 
+.fourth-section-home {
+    visibility: visible;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
