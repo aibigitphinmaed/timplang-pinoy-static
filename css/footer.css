@@ -127,4 +127,9 @@
     display: none;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+    background-color: orangered;
+    left: 1vw;
+    right: 1vw;
 }

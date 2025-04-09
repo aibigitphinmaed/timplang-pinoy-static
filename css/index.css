@@ -13,6 +13,10 @@ body {
     justify-content: center;
 }
 
+.website-wrapper {
+   flex-wrap: wrap;
+}
+
 .main-container {
     width: 80vw;
     height: auto;

@@ -140,6 +140,11 @@
     justify-content: center;
     align-items: center;
 }
+.second-section-home-left-side div:hover,
+.second-section-home-right-side div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
 
 .second-section-home-left-side div img,
 .second-section-home-right-side div img {
@@ -201,6 +206,18 @@
     flex-direction: column;
     transition: transform 0.3s ease;
     padding: 1rem;
+}
+
+.card:hover, card:active {
+    color: orangered;
+    transform: translateY(-10rem); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:focus {
+    outline: none; 
+    transform: translateY(-10rem);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .card h3 {
