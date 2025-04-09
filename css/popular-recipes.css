@@ -1,7 +1,7 @@
 /* General container styles */
 .popular-recipes-container {
     margin: 100px auto;
-    max-width: 1200px;
+    max-width: min( 80vw,1200px);
     padding: 20px;
     text-align: center;
 }
@@ -41,18 +41,18 @@ article {
 }
 
 /* Image scaling for mobile with hover effect */
-article img {
+article .article-wrapper figure img {
     width: 100%;
     height: auto;
     object-fit: cover;
     transition: transform 0.4s ease-in-out;
 }
 
-article:hover img {
+article:hover .article-wrapper figure  img {
     transform: scale(1.05);
 }
 
-article:hover {
+article:hover  {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
