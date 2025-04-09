@@ -43,6 +43,10 @@
         height: min(5vw,50%);
     }
    
+    .second-section-home-center-image img {
+        width: min(100vw, 100%);
+        
+    }
 
 
 }
