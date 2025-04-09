@@ -9,6 +9,8 @@ body {
     background: #f8f8f8;
     padding-top: 60px;
     align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .main-container {
@@ -22,6 +24,7 @@ body {
     margin: 0 auto;
     overflow-y: scroll;
     overflow-x: hidden;
+    padding: 2rem;
 }
 
 .content-divider-section {
@@ -32,8 +35,23 @@ body {
 }
 
 html {
-    font-size: 60%;
+    font-size: 62.5%;
 }
 
+@media (max-width: 768px) {
+    .main-container {
+        width: 90vw;
+    }
+}
 
+@media (max-width: 480px) {
+    .main-container {
+        width: 95vw;
+    }
+}
 
+@media (max-width: 320px) {
+    .main-container {
+        width: 98vw;
+    }
+}
