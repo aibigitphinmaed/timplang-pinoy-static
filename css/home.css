@@ -3,7 +3,7 @@
     height: min(100vh, 100%);
     margin: 0 auto;
     padding-top: 15vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
