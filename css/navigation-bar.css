@@ -8,17 +8,16 @@
 /* ✅ Top Bar Container */
 .top-bar-container {
     width: min(100vw, 1920px);
+    height: auto;
     margin: 0 auto; /* Centers the container */
     background-color: white;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2); /* More pronounced elevation */
     position: fixed;
     justify-content: space-evenly;
-    padding-top: 2vh;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1000;
-    height: min(10vh, 250px);
 }
 
 /* ✅ Logo */

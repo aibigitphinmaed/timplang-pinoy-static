@@ -20,10 +20,13 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
+
 .content-divider-section {
-    width: min(90vw,100%);             
-    height: 0.2vh;            
+    width: min(80vw,100%);             
+    height: 0.1vh;            
     background-color: #726c6c;   
     margin: 2rem 0;           
 }
