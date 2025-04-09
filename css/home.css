@@ -210,7 +210,7 @@
 
 .card:hover, card:active {
     color: orangered;
-    transform: translateY(-10rem); 
+    transform: translateY(-5rem); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -233,8 +233,8 @@
 .card button {
     display: flex;
     flex-direction: row;
-    background-color: orange;
-    color: white;
+    background-color: transparent;
+    color: orangered;
     border-radius: 0.6rem;
     border: none;
     justify-content: center;
@@ -251,6 +251,7 @@
 .card button:hover,
 .card button:active {
     background-color: #cc3700;
+    color: white;
 }
 
 /*END OF THIRD SECTION*/
@@ -260,7 +261,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
-    width: 100%;
+    width: min (80vw,100%);
     padding: 2rem;
     box-sizing: border-box;
+    justify-items: center;
+    align-items: center;
 }
