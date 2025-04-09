@@ -28,10 +28,11 @@
 
 .mobile-logo,
 .logo {
-    font-family: Verdana, sans-serif;
+    font-family: system-ui;
     font-size: 3rem;
     font-weight: bold;
     color: #FF5733;
+    font-style: italic;
 }
 
 .mobile-logo a,
