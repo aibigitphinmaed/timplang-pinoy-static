@@ -1,6 +1,6 @@
 .home-container {
     width: min(80vw, 1920px);
-    height: 100vh;
+    height: min(100vh, 100%);
     margin: 0 auto;
     padding-top: 15vh;
     overflow-y: scroll;
