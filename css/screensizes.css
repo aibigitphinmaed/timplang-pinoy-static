@@ -50,3 +50,25 @@
 /*
 * END OF HOME PAGE SCREEN SIZES
 */
+
+
+/*
+* FOOTER CONTAINER
+*/
+
+@media (max-width: 920px) {
+    .footer-container {
+    display: none;
+    }
+    .mobile-footer-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        width: 100vw;
+        height: min(10vh, 100%);
+    }
+}
+/*
+* END OF FOOTER CONTAINER
+*/

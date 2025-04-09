@@ -5,13 +5,12 @@
     justify-content: space-between;
     align-items: center; /* Center content vertically */
     text-align: center;
-    width: min(100vw,100%);
+    width: min(100vw,1920px);
     margin: 0 auto;
     padding: 20px;
     background-color: white;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
     z-index: 1100;
-
 }
 
 /* Footer Logo */
@@ -122,4 +121,9 @@
 
 .grid-three a {
     color: grey;
+}
+
+
+.mobile-footer-container{
+    display: none;
 }
