@@ -126,7 +126,7 @@
 
 .second-section-home-left-side,
 .second-section-home-right-side {
-    width: min(25vw, 100%);
+    width: min(25vw, 90%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -193,7 +193,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
-    width: 100%;
+    width: min(80vw,100%);
     padding: 2rem;
     box-sizing: border-box;
 }
