@@ -21,5 +21,11 @@ body {
     flex-direction: column;
     margin: 0 auto;
 }
+.content-divider-section {
+    width: min(100vw,100%);             
+    height: 0.5vh;            
+    background-color: #726c6c;   
+    margin: 2rem 0;           
+}
 
 

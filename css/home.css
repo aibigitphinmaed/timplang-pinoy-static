@@ -1,10 +1,19 @@
 .home-container {
-    width: 80vw;
+    width: min(80vw, 1920px);
     height: 100vh;
     margin: 0 auto;
     padding-top: 15vh;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: none;  /* For Firefox */
+    -ms-overflow-style: none;  /* For IE and Edge */
+}
+
+.home-container h1 {
+    align-self: center;
+    margin: 0 auto;
 }
 
 
@@ -19,7 +28,7 @@
 * para di masyado mahaba na yun code dito
 
 */
-.first-section {
+.first-section-home {
     display: flex;
     flex-direction: row;
     width: min(80vw, 100%);
@@ -74,19 +83,101 @@
 }
 
 .spinning-image-container {
-    width: min(40vw,100%);
+    width: min(40vw, 100%);
 }
+
 .spinning-image-container img {
     width: min(100vw, 100%);
     animation: spin 5s linear infinite;
 }
+
 @keyframes spin {
     from {
-        transform: rotate(0deg);  /* Starting position */
+        transform: rotate(0deg);
+        /* Starting position */
     }
+
     to {
-        transform: rotate(360deg);  /* Final position after one full rotation */
+        transform: rotate(360deg);
+        /* Final position after one full rotation */
     }
 }
+
 /*END OF FIRST SECTION */
 
+
+/*SECOND SECTION */
+
+.second-section-home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-section-home-left-side, .second-section-home-right-side {
+    width: min(25vw, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.second-section-home-left-side div, .second-section-home-right-side div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+}
+
+.second-section-home-left-side div img, .second-section-home-right-side div img {
+    width: min(5vw,10%);
+    height: min(5vw,10%);
+    background-color: orangered;
+    border-radius: 10%;
+    margin: 1rem;
+}
+
+.second-section-home-left-side div h3, .second-section-home-right-side div h3 {
+    margin: 1rem;
+}
+.second-section-home-left-side div p, .second-section-home-right-side div p {
+    margin: 1rem;
+}
+
+.second-section-home-center-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 1rem;
+}
+.second-section-home-center-image img {
+    width: min(50vw, 100%);
+}
+
+/*END OF SECOND SECTION */
+
+/*THIRD SECTION*/
+.third-section-home {
+    display: grid;                    
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 2rem;                          
+    width: 100%;                         
+    padding: 2rem;                    
+    box-sizing: border-box;             
+}
+.card {
+    background-color: #fff;             
+    border-radius: 1rem;                 
+    overflow: hidden;                    
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1);
+    display: flex;                      
+    flex-direction: column;            
+    transition: transform 0.3s ease;     
+    padding: 1rem;
+}
+.card h3 {
+    word-break: break-all;
+}
+/*END OF THIRD SECTION*/
