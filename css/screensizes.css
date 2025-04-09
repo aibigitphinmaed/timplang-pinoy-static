@@ -1,0 +1,34 @@
+/*
+* SO ON THIS PART GUYS, HUWAG KAYO MALITO SINCE CARRIED PA DIN DITO
+* yun ibang css classess natin
+* Since doon sa main html natin na link na ito
+*/
+
+/*
+* HOME PAGE SCREEN SIZES
+*/
+
+@media (max-width:920px) {
+    /*
+    * Since column na yun direction dito ng flex dapat 100 na yun width ng each element
+    * ng first section natin sa home page
+    */
+    .first-section {
+        flex-direction: column;
+    }
+    .tagline {
+        width: min(100vw,100%);
+        align-items: center;
+    }
+    .center-description {
+        width: min(100vw,100%);
+    }
+    .spinning-image-container {
+        width: min(100vw,100%);
+    }
+
+}
+
+/*
+* END OF HOME PAGE SCREEN SIZES
+*/
