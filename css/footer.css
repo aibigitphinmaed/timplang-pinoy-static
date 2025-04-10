@@ -6,6 +6,7 @@
     align-items: center; /* Center content vertically */
     text-align: center;
     width: min(100vw,1920px);
+    height: auto;
     margin: 0 auto;
     padding: 20px;
     background-color: white;
