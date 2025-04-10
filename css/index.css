@@ -46,6 +46,16 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 2rem;
+    /* Hide scrollbar for all browsers */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+}
+
+.main-container::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
 }
 
 .content-divider-section {
@@ -79,6 +89,3 @@ html {
         width: 98vw;
     }
 }
-
-
-
