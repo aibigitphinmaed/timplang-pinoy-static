@@ -36,7 +36,7 @@ body {
 }
 
 .main-container {
-    width: 80vw;
+    width: min(80vw, 1920px);
     height: auto;
     background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
