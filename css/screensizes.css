@@ -76,3 +76,26 @@
 /*
 * END OF FOOTER CONTAINER
 */
+
+
+
+@media (max-width: 920px) {
+    .article-section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .article-wrapper{
+        width: min(100vw, 90%);
+        height: min(50vh, 90%);
+    }
+    .recipe-menu {
+        display: none;
+    }
+    .popover-procedure {
+        width: 90%;     /* Use 90% of viewport width */
+        padding: 15px;  /* Slightly reduce padding if needed */
+        height: 50%;
+    }
+}
+

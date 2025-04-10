@@ -1,0 +1,59 @@
+.policy-section,
+.tos-section {
+    margin: 1.5rem auto;
+    padding: 1rem 1.25rem;
+    background-color: #ffffff;
+    border-left: 4px solid orangered;
+    border-radius: 8px;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.policy-heading,
+.tos-heading {
+    color: orangered;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.policy-date,
+.tos-date {
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.policy-list,
+.tos-list {
+    padding-left: 1.2rem;
+    list-style: disc;
+}
+
+.policy-list li,
+.tos-list li {
+    margin-bottom: 0.75rem;
+}
+
+/* 🌐 Responsive Tweaks */
+@media (max-width: 920px) {
+
+    .policy-section,
+    .tos-section {
+        padding: 1rem;
+    }
+
+    .policy-heading,
+    .tos-heading {
+        font-size: 1.25rem;
+    }
+
+    .policy-date,
+    .tos-date {
+        font-size: 0.85rem;
+    }
+
+    .policy-list li,
+    .tos-list li {
+        font-size: 0.95rem;
+    }
+}

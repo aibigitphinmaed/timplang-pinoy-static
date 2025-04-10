@@ -41,7 +41,7 @@ document.getElementById('mobile-menu').addEventListener('mouseleave', function()
     this.classList.remove('active');
 });
 
-function changeContent(page) {
+function changeContent(page, scrollToId=null) {
     fetch(page)
         .then(response => {
             if (!response.ok) {

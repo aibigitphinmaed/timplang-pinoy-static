@@ -12,33 +12,14 @@
 }
 
 
-.article-section, .article-wrapper, .article-image .article-body-culture{
-    width: min(100vw, 100%);
-}
-
-.article-wrapper {
+.article-wrapper-culture {
     width: min(25vw, 90%);
-    height: min(50vh, 90%);
+    height: min(25vh, 90%);
     padding: 1rem;
     margin: 1rem 1rem;
 }
 
-.article-section{
-    display: flex;
-    padding: 1rem;
+.article-image-culture {
+    width: min(100vw, 100%);
+    height: min(100vh, 100%);
 }
-
-
-@media (max-width: 920px) {
-    .article-section{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .article-wrapper{
-        width: min(100vw, 90%);
-    height: min(50vh, 90%);
-    }
-}
-
-
