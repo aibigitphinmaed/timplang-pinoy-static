@@ -1,7 +1,7 @@
 .recipe-menu {
     display: flex;
     position: fixed;
-    padding-top: 70px;
+    padding-top: 5vhvh;
     z-index: 1100;
     justify-content: center; /* Centers the menu */
     align-items: center;
